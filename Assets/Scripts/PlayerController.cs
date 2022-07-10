@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,9 +28,8 @@ public class PlayerController : MonoBehaviour
     private float upDown;
     private float leftRight;
 
-    private int hp = 4;
+    public int hp = 4;
     private int hpNew = 4;
-
 
 
     private Vector2 newVelocity;
@@ -51,7 +51,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(speed * transform.right * leftRight);
         }
+
     }
+
+
+
     private void FixedUpdate()
     {
         if (hpNew != hp)
@@ -92,4 +96,5 @@ public class PlayerController : MonoBehaviour
             hpNew = hp - 1;
         }
     }
+
 }

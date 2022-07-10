@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e6f6cddac5077e643bf3476158e8c7d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -123,6 +123,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  canvasLifeBar: {fileID: 0}
+  lifeBar0: {fileID: 21300000, guid: 6d737cf9c66f3014dbda0c4af6d828a0, type: 3}
+  lifeBar1: {fileID: 21300000, guid: 5a40d7ab9c45a3a48a95ca4b4558e8f6, type: 3}
+  lifeBar2: {fileID: 21300000, guid: a42fe43c502b75146936c150ae8fc23b, type: 3}
+  lifeBar3: {fileID: 21300000, guid: bb721883d497cd6469965fa380fff1be, type: 3}
+  lifeBar4: {fileID: 21300000, guid: 406073032c952cc46ac8b1e96889b3b9, type: 3}
+  hp: 4
 --- !u!58 &1191354429974828382
 CircleCollider2D:
   m_ObjectHideFlags: 0

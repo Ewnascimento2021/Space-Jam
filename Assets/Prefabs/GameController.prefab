@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9110100966062502670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9110100966062502668}
+  - component: {fileID: 9110100966062502671}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9110100966062502668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9110100966062502670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 583.295, y: 319.17505, z: -79.73128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9110100966062502671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9110100966062502670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0f70e79a301724a8aef84ed3aec669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasTimerText: {fileID: 0}
+  totalTime: 180
+  player: {fileID: 0}
+  canvasLifeBar: {fileID: 0}
+  lifeBar0: {fileID: 21300000, guid: 6d737cf9c66f3014dbda0c4af6d828a0, type: 3}
+  lifeBar1: {fileID: 21300000, guid: 5a40d7ab9c45a3a48a95ca4b4558e8f6, type: 3}
+  lifeBar2: {fileID: 21300000, guid: a42fe43c502b75146936c150ae8fc23b, type: 3}
+  lifeBar3: {fileID: 21300000, guid: bb721883d497cd6469965fa380fff1be, type: 3}
+  lifeBar4: {fileID: 21300000, guid: 406073032c952cc46ac8b1e96889b3b9, type: 3}

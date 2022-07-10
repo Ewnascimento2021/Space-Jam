@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aim: {fileID: 5887818729173098068}
-  timeInterval: 3
+  timeInterval: 10
   projectile: {fileID: 7360648689824657333, guid: 6f0db4661c2722143971baeb90f121fa, type: 3}
   speed: 50
 --- !u!1 &3112688239671818275

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8369150218114517825}
   m_Layer: 0
   m_Name: LaserWall
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 5432172231741776181}
+  timeInterval: 3
 --- !u!1 &5432172231741776181
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,37 +11,50 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private float totalTime;
+    [SerializeField]
+    private GameObject door;
 
     [SerializeField]
     private GameObject player;
     private float initialTime;
     private float canvasTime;
 
-    void Start()
+    public bool isGreenButtonPressed;
+
+
+    private void Start()
     {
-        initialTime = Time.time;
+        initialTime = Time.time; 
+
     }
-
-
-    private void FixedUpdate()
+    private void Update()
     {
-        Timer();
-        if (canvasTime < totalTime / 3)
-            canvasTimerText.color = new Color(1, 0, 0);
-        else if (canvasTime < totalTime * 2/3)
-            canvasTimerText.color = new Color(1, 1, 0);
 
-        if ((canvasTime < 0)||player.GetComponent<PlayerController>().hp < 1 )
+       if(isGreenButtonPressed)
         {
-            Debug.Log("GameOver");
+            door.GetComponent<SpriteRenderer>().color = new Color(0, 0.75f, 0.35f);
+            door.GetComponent<BoxCollider2D>().isTrigger = true;
         }
 
 
     }
+    private void FixedUpdate()
+    {
+            Timer();
+            if (canvasTime < totalTime / 3)
+                canvasTimerText.outlineColor = new Color(1, 0, 0);
+            else if (canvasTime < totalTime * 2 / 3)
+                canvasTimerText.outlineColor = new Color(1, 1, 0);
+
+            if ((canvasTime < 0) || player.GetComponent<PlayerController>().hp < 1)
+            {
+                Debug.Log("GameOver");
+            }
+    }
 
     private void Timer()
     {
-        canvasTime = totalTime - Time.time - initialTime;
+        canvasTime = totalTime - (Time.time - initialTime);
         int minutes = (int) canvasTime / 60;
         int seconds = (int) canvasTime % 60;
         canvasTimerText.text = $"{minutes}:{seconds}";

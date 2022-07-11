@@ -3,13 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
 
     [SerializeField]
+    private int nextLevel;
+
+    [SerializeField]
     private float speed;
+
+    [SerializeField]
+    private GameObject gc;
 
     [SerializeField]
     private Image canvasLifeBar;
@@ -30,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
     public int hp = 4;
     private int hpNew = 4;
+
 
 
     private Vector2 newVelocity;
@@ -94,6 +102,15 @@ public class PlayerController : MonoBehaviour
         else if (other.CompareTag("Laser"))
         {
             hpNew = hp - 1;
+        }
+        if(other.CompareTag("GreenButton"))
+        {
+            Destroy(other.gameObject);
+            gc.GetComponent<GameController>().isGreenButtonPressed = true;
+        }
+        if (other.CompareTag("FinalDoor"))
+        {
+            SceneManager.LoadScene(nextLevel);
         }
     }
 

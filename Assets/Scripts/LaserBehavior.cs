@@ -11,11 +11,11 @@ public class LaserBehavior : MonoBehaviour
     private float timeInterval;
     private float lastTimeStamp;
 
+    [SerializeField]
+    private AudioSource soundLaser;
+
     private bool isActive;
-    void Start()
-    {
-        
-    }
+
     void Update()
     {
         Timer();
@@ -37,6 +37,7 @@ public class LaserBehavior : MonoBehaviour
             {
                 laser.SetActive(true);
                 isActive = true;
+                soundLaser.Play();
             }
         }
     }

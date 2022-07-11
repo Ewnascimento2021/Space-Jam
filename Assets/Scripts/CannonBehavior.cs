@@ -14,8 +14,13 @@ public class CannonBehavior : MonoBehaviour
     private Rigidbody2D projectile;
     private float lastTimeStamp;
 
+
+
     [SerializeField]
     private float speed;
+
+    [SerializeField]
+    private AudioSource soundCannon;
     void Start()
     {
 
@@ -41,6 +46,7 @@ public class CannonBehavior : MonoBehaviour
     {
         Rigidbody2D newProjectile = Instantiate(projectile, aim.position, aim.rotation);
         newProjectile.AddForce(transform.up * speed);
+        soundCannon.Play();
     }
 }
 

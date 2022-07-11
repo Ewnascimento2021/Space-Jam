@@ -17,9 +17,12 @@ public class MenuController : MonoBehaviour
     private int lineSelected = 1;
 
     private int level = 1;
+
+    [SerializeField]
+    private AudioSource soundBackground;
     void Start()
     {
-
+        soundBackground.Play();
     }
     void Update()
     {

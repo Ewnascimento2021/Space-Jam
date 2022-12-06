@@ -122,7 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ccc08129f61d78488941471bd82c7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: 0
   speed: 0.1
+  gc: {fileID: 0}
   canvasLifeBar: {fileID: 0}
   lifeBar0: {fileID: 21300000, guid: 6d737cf9c66f3014dbda0c4af6d828a0, type: 3}
   lifeBar1: {fileID: 21300000, guid: 5a40d7ab9c45a3a48a95ca4b4558e8f6, type: 3}
